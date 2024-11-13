@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PranaPulse Yoga</title>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => section.style.display = 'none'); // Hide all sections
+            document.getElementById(sectionId).style.display = 'block'; // Show the selected section
+        }
+
+        window.onload = function() {
+            showSection('home'); // Show home section by default
+        };
+    </script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <h1>PranaPulse Yoga</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('about')">About</a></li>
+                <li><a href="#" onclick="showSection('yoga-poses')">Poses</a></li>
+                <li><a href="#" onclick="showSection('research')">Research Articles</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <h1>PranaPulse</h1>
+        <h2>Breathe Deep, Move Freely, Transform Fully</h2>
+        <p>Join us on a journey to inner peace and physical wellness.</p>
+        <div class="search-bar">
+            <form action="search_asana.php" method="post">
+              <input type="text" placeholder="Search Yoga Asanas" required>
+              <button>Search</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" style="display: none;">
+        <h2>About Us</h2>
+        <p>At PranaPulse Yoga, we believe in nurturing the body and soul. Our classes are designed for all levels to create a sanctuary for movement, mindfulness, and self-discovery.</p>
+    </section>
+
+    <!-- Poses Section -->
+    <section id="yoga-poses" style="display: none;">
+        <h2>Yoga Poses</h2>
+        <div class="pose-cards">
+            <!-- Outer Card for Beginner Yoga -->
+            <div class="card">
+                <h3>Beginner Yoga</h3>
+                <div class="nested-card">
+                    <h4>Mountain Pose</h4>
+                    <a href="mountain.html">Explore</a>
+                    <p>A grounding pose to start any practice, focusing on alignment and breathing.</p>
+                </div>
+                <div class="nested-card">
+                    <h4>Downward Dog</h4>
+                    <a href="downwarddog.html">Explore</a>
+                    <p>A classic pose to stretch and strengthen the entire body.</p>
+                </div>
+            </div>
+        
+            <!-- Outer Card for Intermediate Yoga -->
+            <div class="card">
+                <h3>Intermediate Yoga</h3>
+                <div class="nested-card">
+                    <h4>Warrior II</h4>
+                    <a href="warrior2.html">Explore</a>
+                    <p>A strengthening pose for legs and core, enhancing focus and stability.</p>
+                </div>
+                <div class="nested-card">
+                    <h4>Tree Pose</h4>
+                    <a href="tree.html">Explore</a>
+                    <p>Balance and focus are key in this grounding pose.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Research Articles Section -->
+    <section id="research" style="display: none;">
+        <h2>Research Articles</h2>
+        <p>Explore research articles on the benefits and techniques of yoga for mind and body wellness.</p>
+        <div class="article-cards">
+            <div class="card">
+                <h3>Yoga and Mental Health</h3>
+                <p>An overview of recent studies linking yoga practices to mental health benefits.</p>
+                <a href="mental-health.html" target="_blank">Read More</a>
+            </div>
+            <div class="card">
+                <h3>Physical Benefits of Yoga</h3>
+                <p>Research articles discussing how yoga improves flexibility, strength, and overall fitness.</p>
+                <a href="physical-benefits.html" target="_blank">Read More</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
